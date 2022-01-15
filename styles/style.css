@@ -84,7 +84,14 @@ nav{
     font-weight: 600;
     padding: 15px 10px;
 }
-
+#nav-toggler{
+    display: none;
+}
+.nav-toggler-icon{
+    display: none;
+    color: black;
+    font-size: 30px;
+}
 /* >>>>>>>>>>>>>>>>>>>>>>>>
 <<<<< Banners section >>>>>
 <<<<<<<<<<<<<<<<<<<<<<<<<<< */
@@ -102,7 +109,7 @@ nav{
     align-items: flex-start;
 }
 .banner-left h1{
-    font-size: 45px;
+    font-size: 8.5vh;
 }
 .banner-right img{
     width: 80%;
@@ -117,13 +124,13 @@ nav{
 }
 .users-logo{
     display: grid;
-    grid-template-columns: repeat(7, 2fr);
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
     align-items: center;
 }
 .users-logo img{
     object-fit: cover;
     width: auto;
-    object-fit: cover;
 }
 
 /* Collections */
@@ -199,4 +206,74 @@ nav{
     color: white;
     text-align: center;
     letter-spacing: 10px;
+}
+
+/*------------------------------
+>>>>>> Responsive Design <<<<<<<  
+--------------------------------*/
+@media (max-width:480px) {
+    .container{
+        width: 100%;
+    }
+    .container>h3{
+        position: absolute;
+        width: 60%;
+        left: 40%;
+    }
+    .banner{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .banner-right{
+        order: 1;
+        justify-content: center;
+
+    }
+    .banner-left{
+        order: 2;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .banner-left h1{
+        font-size: 4.5vh;
+    }
+    .collections{
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-evenly;
+    }
+    .nav-toggler-icon{
+        display: block;
+    }
+    .navigation{
+        position: absolute;
+        top: 80px;
+        left: 10;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px 0;
+        transform: translateY(-410px);
+        transition: .5s ease-in-out;
+    }
+    #nav-toggler:checked ~ .navigation{
+        transform: translateY(0px);
+    }
+
+    /* Logos section  */
+    .users{
+        /* margin-top: 20px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+        display: none;
+    }
+    .users-logo{
+        /* display: grid; */
+        /* grid-template-columns: repeat(4, 2fr);
+        align-items: center; */
+        display: none;
+    }
 }
