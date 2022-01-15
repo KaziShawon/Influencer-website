@@ -22,11 +22,26 @@ body{
     margin: 20px auto;
     padding: 0 30px;
 }
+.primary-button{
+    outline: 0;
+    border: 0;
+    background-color: #FF008E;
+    padding: 15px 20px;
+    color: #ffff;
+    font-size: 14px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 7px 0 #a5075e;
+}
+/* ~~~~~~~~~~~~~~~~~~
+ Navigations and title  
+ ~~~~~~~~~~~~~~~~~~~~ */
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
 }
 .navigation{
     display: flex;
@@ -40,4 +55,25 @@ nav{
     color: #fff;
     font-weight: 600;
     padding: 15px 10px;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>
+<<<<< Banners section >>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.banner{
+    height: calc(100vh -80px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.banner-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.banner-left h1{
+    font-size: 45px;
+}
+.banner-right img{
+    width: 80%;
 }
