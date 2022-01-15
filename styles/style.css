@@ -29,7 +29,6 @@ body{
 .primary-button{
     outline: 0;
     border: 0;
-    /* width: 200px; */
     width: 50%;
     font-weight: 700;
     margin-top: 30px;
@@ -111,7 +110,11 @@ nav{
     align-items: flex-start;
 }
 .banner-left h1{
-    font-size: 8.5vh;
+    font-size: 7.5vh;
+}
+.banner-left p{
+    color: rgb(41, 38, 38);
+    font-size: 3.3vh;
 }
 .banner-right{
     display: flex;
@@ -121,9 +124,7 @@ nav{
 .banner-right img{
     width: 70%;
 }
-.banner-left p{
-    color: rgb(41, 38, 38);
-}
+
 /* Logos section  */
 .users{
     margin-top: 80px;
@@ -293,24 +294,18 @@ nav{
         transform: translateY(0px);
     }
 
-    /* Logos section  */
+    /* +++++++++++++++++++++
+    ----- Logos section ----
+    ++++++++++++++++++++++++ */
     .users{
-        /* margin-top: 20px;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center; */
         display: none;
     }
     .users-logo{
-        /* display: grid; */
-        /* grid-template-columns: repeat(4, 2fr);
-        align-items: center; */
+
         display: none;
     }
     .bottom-button{
         top: 10%;
-        /* left: 24vh; */
         left: calc(100% - 50px);
         margin-top: 40px;
     }
