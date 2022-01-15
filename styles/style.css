@@ -22,14 +22,15 @@ body{
 ---- Common CSS -----
 ++++++++++++++++++++++*/
 .container{
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 30px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20%;
 }
 .primary-button{
     outline: 0;
     border: 0;
-    width: 200px;
+    /* width: 200px; */
+    width: 50%;
     font-weight: 700;
     margin-top: 30px;
     background-color: #d4085d;
@@ -51,7 +52,7 @@ body{
 }
 .section-title h2{
     margin: 0 auto;
-    font-size: 30px;
+    font-size: 2vw;
     display: inline-block;
     color: rgb(29, 29, 29);
     margin: 30px 0;
@@ -97,10 +98,11 @@ nav{
 <<<<<<<<<<<<<<<<<<<<<<<<<<< */
 .banner{
     height: calc(100vh -80px);
-    min-width: 500px;
+    min-width: 50%;
     font-weight: 600;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
 }
 .banner-left{
     display: flex;
@@ -111,10 +113,17 @@ nav{
 .banner-left h1{
     font-size: 8.5vh;
 }
-.banner-right img{
-    width: 80%;
-}
+.banner-right{
+    display: flex;
+    justify-content: center;
 
+}
+.banner-right img{
+    width: 70%;
+}
+.banner-left p{
+    color: rgb(41, 38, 38);
+}
 /* Logos section  */
 .users{
     margin-top: 80px;
@@ -135,7 +144,7 @@ nav{
 
 /* Collections */
 #popular-collection{
-    padding-bottom: 40px;
+    padding-bottom: 2vh;
 }
 .collections{
     display: grid;
@@ -184,14 +193,16 @@ nav{
     color: #a5075e;
     position: relative;
     top: 10%;
-    left: 88.5%;
+    left: 102%;
     margin-top: 40px;
     background-color: transparent;
     cursor: pointer;
 }
 .footer{
-    height: 25vh;
-    background-color: black;
+    height: 100%;
+    padding-top: 1.5%;
+    padding-bottom: 2%;
+    background-color: rgb(1, 1, 29);
     display: flex;
     flex-direction: column;
     
@@ -216,9 +227,10 @@ nav{
         width: 100%;
     }
     .container>h3{
+        top: 3.8%;
         position: absolute;
         width: 60%;
-        left: 40%;
+        left: 25%;
     }
     .banner{
         grid-template-columns: 1fr;
@@ -236,25 +248,45 @@ nav{
         text-align: center;
     }
     .banner-left h1{
-        font-size: 4.5vh;
+        padding-top: 5vh;
+        font-size: 3vh;
+    }
+    .primary-button{
+        width: 60%;
+        font-weight: 700;
+        margin-top: 30px;
+        font-size: 16px;
+        border-radius: 15px;
+        box-shadow: 0 5px 0 #a5075e;
+    }
+    .banner-left p{
+        width: 90vw;
+        font-size: 2vh;
+    }
+    .section-title h2{
+        font-size: 5vw;
     }
     .collections{
         grid-template-columns: repeat(1, 1fr);
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
     }
     .nav-toggler-icon{
         display: block;
+        position: absolute;
+        top: 3vh;
+        left: 4vw;
     }
     .navigation{
         position: absolute;
         top: 80px;
-        left: 10;
+        left: 10px;
         width: 100%;
         flex-direction: column;
         align-items: center;
         background-color: #fff;
         padding: 20px 0;
-        transform: translateY(-410px);
+        transform: translateY(-450px);
         transition: .5s ease-in-out;
     }
     #nav-toggler:checked ~ .navigation{
@@ -275,5 +307,11 @@ nav{
         /* grid-template-columns: repeat(4, 2fr);
         align-items: center; */
         display: none;
+    }
+    .bottom-button{
+        top: 10%;
+        /* left: 24vh; */
+        left: calc(100% - 50px);
+        margin-top: 40px;
     }
 }
