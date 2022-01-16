@@ -152,7 +152,9 @@ nav{
     width: auto;
 }
 
-/* Collections */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>>>>>>>>>>>>> Collections <<<<<<<<<<<<<
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #popular-collection{
     padding-bottom: 2vh;
 }
@@ -235,7 +237,8 @@ nav{
     font-size: 6vh;
 }
 .featured-des p{
-    font-size: 2.2vh;
+    width: 80%;
+    font-size: 2.8vh;
 }
 .featured-des button{
     width: 30%;
@@ -355,9 +358,9 @@ nav{
         left: calc(100% - 50px);
         margin-top: 40px;
     }
-    /* /* --------------------------------------------
+    /* -------------------------------------------
     >>>>>>>> A collections what you require <<<<<<<
-    ----------------------------------------------- */
+    ----------------------------------------------  */
      .featured-product{
         right: 3.8vh;
         display: grid;
@@ -477,4 +480,43 @@ nav{
     #nav-toggler:checked ~ .navigation{
         transform: translateY(0px);
     }
+    /* --------------------------------------------
+      >>>>>>>> A collections what you require <<<<<<<
+    ----------------------------------------------- */
+    .featured-product{
+        right: 3.8vh;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-img img{
+        height: 88%;
+        width: 88%;
+        object-fit: cover;
+    }
+    .featured-img{
+        margin-top: 3vh;
+        padding-left: 5vw;
+        order: 2;
+    }
+    .featured-des{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        order: 1;
+    }
+    .featured-des h2{
+        font-size: 3.5vh;
+        text-align: center;
+    }
+    .featured-des p{
+        font-size: 1.8vh;
+        text-align: center;
+        
+    }
+    .featured-des button{
+        font-size: 3vw;
+        width: 50%;
+    } 
 }
