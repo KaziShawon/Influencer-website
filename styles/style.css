@@ -127,7 +127,13 @@ nav{
     height: auto;
     object-fit: cover;
 }
-
+/* Animation Rotate the image 360 degree */
+.banner-right img {
+    transition: transform .7s ease-in-out;
+  }
+.banner-right img:hover {
+    transform: rotate(360deg);
+  }
 /* Logos section  */
 .users{
     margin-top: 80px;
